@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Amazon remake</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                border: border-box;
+            }
+            body{
+                background-color: lightgray;
+            }
+            .nav-bar{
+                background-color: black;
+                height: 60px;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .logo{
+                width: 140px;
+                height: 44px;
+                background-image: url(".//White-Amazon-Logo-PNG-HD-Quality.webp");
+                background-size: cover;
+                position: relative;
+                top: 3px;
+            }
+            .nav-address{
+                width: 205px;
+                height: 50px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 20px;
+                align-content: center;
+                
+            }
+            .delivery{
+                position: relative;
+                left: 30px;
+            }
+            .nav-search{
+                display: flex;
+                justify-content: space-between;
+               width: 600px;
+               background-color:transparent;
+               height: 40px;
+            } 
+            .nav-search-logo{
+                background-color: orange;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+            .nav-placeholder{
+                width: 544px;
+            }
+            .nav-select{
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+            .flag{
+                width: 70px;
+                height: 45px;
+                background-color:transparent;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .flag-logo{
+                width: 21.6px;
+                height: 20.2px;
+                background-image: url("https://imgs.search.brave.com/uTB6BudkGtzV0GD5EnYz_G759t3u4oj5jXTegExTOtM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9lbW9q/aWdyYXBoLm9yZy9t/ZWRpYS90d2l0dGVy/L2ZsYWctaW5kaWFf/MWYxZWUtMWYxZjMu/cG5n");
+                background-size: cover;
+                
+            }
+            .flag-select{
+                width: 37px;
+                height: 15px;
+                background-color: transparent;
+                color: white;
+                border: transparent ;
+            }
+            #hello-sign-in{
+                font-size: 12px;
+            }
+            .nav-return-orders{
+                height: 50px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+                
+            }
+            #returns{
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+            pre{
+                font-size: 14px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .cart{
+                display: flex;
+                height: 50px;
+                align-items: center;
+            }
+            .border{
+                border: 0px solid transparent;
+            }
+            .border:hover{
+                border: 1px solid white;
+            }
+            .borderSearch{
+                border: 0px solid transparent;
+               
+            }
+            .borderSearch:hover{
+                border: 1px solid yellow;
+                border-radius: 5px;
+            }
+            .panel{
+                width: 100vw;
+                height: 39px;
+                background-color: #134242;
+                color: white;
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .panel-select{
+                color: white;
+                background-color: transparent;
+                width: 58px;
+                height: 18px;
+                border: transparent;
+            }
+            .content{
+                width: 99vw;
+                height: 400px;
+                background-color: orange;
+                position: relative;
+                left: 8px;
+                display: flex;
+                justify-content: space-around;
+            }
+            .deals{
+                position: relative;
+                top: 80px;
+                height: 200px;
+                width: 400px;
+                font-family:fantasy;
+                font-size: 2rem;
+                position: relative;
+                left: 200px;
+            }
+           
+            .content-image{
+            width: 200px;
+            height: 200px;
+            background-image: url("https://imgs.search.brave.com/RyS3wdgrCnKS4MsNJrVaC_9wP00uJevc5tHv8yub7jY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2QyLzRl/L2E1L2QyNGVhNTNl/NWRkNjYwZTEzNWQw/NWYzOGQ2NTZlYzkw/LmpwZw");
+            background-size: cover;
+            position:relative;
+            right: 300px;
+           
+           } 
+           .shop-section1{
+            display: flex;
+            justify-content: space-evenly;
+            
+           }
+           .box{
+            width: 330px;
+            height: 420px;
+            background-color:white;
+           }
+           .image1-2{
+            width: 330px;
+            height: 105px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0px 10px 0px;
+            margin: 10px 0px 10px 0px;
+           }
+           .image1{
+            background-image: url("https://imgs.search.brave.com/RD5sqEnyFHo9VtB4f0hgYsJUh4g5yhZAWsh5kSzYKK0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4x/MS5iaWdjb21tZXJj/ZS5jb20vcy1ncmd3/c2cydXBmL2ltYWdl/cy9zdGVuY2lsLzUw/MHg2NTkvcHJvZHVj/dHMvMzEyLzEwNDUv/TmlsZ2lyZWVfLV9U/M18tX0FLU0ktMTgz/TlFaLTJfXzc3NTI5/LjE3NDQ2NDE5MzEu/anBnP2M9MQ");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+
+           }
+           .image2{
+            background-image: url("https://imgs.search.brave.com/tfVrlK_sXTfN-ZFCMLlJ3l5Vuu_NIoCA_NkbWNO5EuE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9oYXZl/bGxzLmNvbS9tZWRp/YS9jYXRhbG9nL3By/b2R1Y3QvY2FjaGUv/MjA1MWRmZTczOTli/YmIxMmZjZGIzMzEz/YzZmNzljYzQvZy9s/L2dsZGMyNzJzZ2l0/MmdjXzVfXzEuanBn");
+            background-size:cover ;
+            width: 150px;
+            height: 105px;
+           }
+           .ac-fridge{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .image3-4{
+            width: 330px;
+            height: 105px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0px 10px 0px;
+            margin: 10px 0px 10px 0px;
+           }
+           .image3{
+             background-image: url("https://imgs.search.brave.com/h_gUXt9mce1A69MIa2mDWytrS21tE63wRkL_TcOeS2Q/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/dGhld2lyZWN1dHRl/ci5jb20vd3AtY29u/dGVudC9tZWRpYS8y/MDI1LzA3L05OLUNW/ODdLU19oYW5kb3V0/X2Zyb21fUGFuYXNv/bmljLTEtc2NhbGVk/LmpwZz9hdXRvPXdl/YnAmcXVhbGl0eT03/NSZ3aWR0aD0xMDI0");
+            background-size:cover ;
+            width: 150px;
+            height: 105px;
+           }
+           .image4{
+            background-image: url("https://imgs.search.brave.com/oAPmHtGLNXnEL6YvnG4Gs4NgfsyYJbz_S8yh1PNkeD0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/d2FzaGluZy1tYWNo/aW5lLXJlYWxpc3Rp/Yy1iYWNrZ3JvdW5k/LXdpdGgtbGF1bmRy/eS1lcXVpcG1lbnQt/c3ltYm9scy1pbGx1/c3RyYXRpb25fMTI4/NC0yOTEzMC5qcGc_/c2VtdD1haXNfaHli/cmlk");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .microwave-washingMachine{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .image5-6{
+            width: 330px;
+            height: 105px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0px 10px 0px;
+            margin: 10px 0px 10px 0px;
+           }
+           .image5{
+            background-image: url("https://imgs.search.brave.com/qQKJjXo8GG3_3mNMmRF8FkelXp5WOnr7dJaUu2mR0PI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMubWVlc2hvLmNv/bS9pbWFnZXMvcHJv/ZHVjdHMvMjYxMzEy/OTE5LzVzaHFvXzUx/Mi53ZWJwP3dpZHRo/PTUxMg");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .image6{
+            background-image: url("https://imgs.search.brave.com/MdNPtHp7m03AP0IxB0R11uZPPmzmHO9g8a90lGmqsvo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzI0ODU2MTI2L2Mv/MTI2OC8xMjY4LzEw/LzMzL2lsL2ViYjBi/OC80MTk3NjU0MDI5/L2lsXzYwMHg2MDAu/NDE5NzY1NDAyOV9x/Y3U4LmpwZw");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .bedsheet-figurines{
+            display:flex;
+            justify-content: space-evenly;
+           }
+            .bedsheet{
+            font-size: 0.85rem;
+           }
+           .figurines{
+            font-size: 0.85rem;
+           }
+           .image7-8{
+            width: 330px;
+            height: 105px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0px 10px 0px;
+            margin: 10px 0px 10px 0px;
+           }
+           .image7{
+            background-image: url("https://imgs.search.brave.com/_LJ_F_6PEJtnLQrYGhFFQtq4MXuUiJorT4J0E5K2E64/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9yb29t/Zm9ydHVlc2RheS5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjUvMDEvQ29va2Jv/b2tzLWluLUtpdGNo/ZW4tTmljaGUtc2Nh/bGVkLmpwZw");
+            background-size:cover;
+            width: 150px;
+            height: 105px;
+           }
+           .image8{
+            background-image: url("https://imgs.search.brave.com/qAJrh24TzP_oz3qRPa8P6igRuvuLBsKbltjAXYqUKCU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzYxMi82MTIveGlm/MHEvdGFibGUtbGFt/cC8xLzcvei8zLWNv/bG91ci1tb2RlLXJl/Y2hhcmdlYWJsZS1m/bGV4aWJsZS1nb29z/ZW5lY2stbGVkLXN0/dWR5LWRlc2stb3Jp/Z2luYWwtaW1haGhm/ZWRzZTJod3VndS5q/cGVnP3E9NzA");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .storage-lighting{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .image9-10{
+            width: 330px;
+            height: 105px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0px 10px 0px;
+            margin: 10px 0px 10px 0px;
+           }
+           .image9{
+            background-image: url("https://imgs.search.brave.com/KQtmLi2TeGLn3_Shfy7ZAoKZBRXKuyN4En4d66GNf-U/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvYWVz/dGhldGljLWxhcHRv/cC0xOTIwLXgtMTIw/MC1waWN0dXJlLXp4/b3p0aGtlOWd3bDFs/aXAuanBn");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .image10{
+            background-image: url("https://imgs.search.brave.com/JpO7s_xjv7Y3VJXT-EeQg5ULXXVex2fD3SicJCN6U-Q/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzQwLzFi/L2ZlLzQwMWJmZTIw/M2EzZjIxZGNiODA1/NTRjM2VkMDJiNTMz/LmpwZw");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .laptop-kitchen{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: small;
+           }
+           /* .laptop{
+            font-size: 13px;
+           }
+           .kitchen{
+            font-size: 13px;
+           } */
+           .image11-12{
+            width: 330px;
+            height: 105px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0px 10px 0px;
+            margin: 10px 0px 10px 0px;
+           }
+           .image11{
+            background-image: url("https://imgs.search.brave.com/UcsuAqxWRQ219TYLua3jBB4a8dqOZ5q81AKoP5iaYgo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL3ZhZGVyLXBy/b2QuczMuYW1hem9u/YXdzLmNvbS8xNzEy/MTUzNjkyLWV6Z2lm/LTQtNjM3YzIwNGE1/OC02NjBkNjQ0NzZm/YTZmLmpwZz9jcm9w/PTAuNzMyeHc6MC43/MzJ4aDswLjAzNTN4/dywwLjIwMnhoJnJl/c2l6ZT05ODA6Kg");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .image12{
+            background-image: url("https://imgs.search.brave.com/lduWX5i1hqhDJCn-yH69ViMB6cQfE8ph_Z5Kc3CP_lQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzU2LzFh/LzIyLzU2MWEyMjA5/MDhiNzYyZjhjODBl/ZjExYTgyNTYwY2E3/LmpwZw");
+            background-size:contain;
+            width: 150px;
+            height: 105px;
+           }
+           .chair-boots{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: small;
+           }
+           .image13-14{
+            width: 330px;
+            height: 105px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0px 10px 0px;
+            margin: 10px 0px 10px 0px;
+           }
+           .image13{
+            background-image: url("https://imgs.search.brave.com/hGOziCjQIvu5LZTJR6j8hdoNjwmWdWswCVbp2YmU-Hk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9jbGVh/bmluZy1zdXBwbGll/cy1tb3AtZ2xvdmVz/LWJ1Y2tldC13cmlu/Z2VyLXdvb2Rlbi1s/YW1pbmF0ZS1mbG9v/ci1zaXR0aW5nLW1v/ZGVybi1saXZpbmct/cm9vbS13ZXQtZXF1/aXBtZW50LXRvb2xz/LTM2OTIyODM0Ni5q/cGc");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .image14{
+            background-image: url("https://imgs.search.brave.com/tWTra67M3hAPC_F0v5Rs9z77Xv_Jk20l_PSKNi17Cvo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9rZW5u/ZWR5dHJhbnNtaXNz/aW9uLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNC8wNC9r/ZW5uZWR5LTItMTAy/NHg2ODMuanBn");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .cleaning-tyre{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: small;
+           }
+           .image15-16{
+            width: 330px;
+            height: 105px;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0px 10px 0px;
+            margin: 10px 0px 10px 0px;
+           }
+           .image15{
+            background-image: url("https://imgs.search.brave.com/oh5eIHNDz2GYTJv51siYsRhCj_13mheBieXUC_NToqs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/YWZlbHktbW90b3Jj/eWNsZS1oZWxtZXRf/MjMtMjE1MTUzMTI0/NS5qcGc_c2VtdD1h/aXNfc2VfZW5yaWNo/ZWQmdz03NDAmcT04/MA");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .image16{
+            background-image: url("https://imgs.search.brave.com/hlwbtq426DaKv6al0pn7e9SdJYbCoDSCcI2keSrxQXY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTcx/MzExNDc2L3Bob3Rv/L3ZhY3V1bS1jbGVh/bmVyLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1NNVphWXlL/eURxVFUyWlVaS29K/WW40bXUtaFhQZWt4/UlA1YzNGZlJUVndV/PQ");
+            background-size: cover;
+            width: 150px;
+            height: 105px;
+           }
+           .helmet-vaccumCleaner{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: small;
+           }
+           .shop-section2{
+            height: 285px;
+            width: 93.9vw;
+            background-color: white;
+            position: relative;
+            left: 40px;
+            margin:20px 0px 20px 0px;
+            padding: 10px 20px 10px 20px;
+            
+            
+           }
+           .section2-images{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss2-image1{
+            width: 172px ;
+            height: 200px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            background-image: url("https://imgs.search.brave.com/iwzRAIhDRiGLRAKXaWre4jwJvP6Bd2PnXowVEaPOrdc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9oYW1t/ZXJvbmxpbmUuaW4v/Y2RuL3Nob3AvZmls/ZXMvSGFtbWVyQWN0/aXZlMi4wVWx0cmEu/d2VicD92PTE2OTQ4/NTA4NTImd2lkdGg9/MTA4MA");
+            background-size: cover;
+           }
+           .ss2-image2{
+            width: 280px ;
+            height: 210px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 5px;
+            background-image: url("https://imgs.search.brave.com/BKZREm3VvE9INQKTX7Mwrmo0dWWO5goMG1tmKX3ijco/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFxMWVlN1ErQkwu/anBn");
+            background-size: cover;
+           }
+           .ss2-image3{
+            width: 218px ;
+            height: 200px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 5px;
+            background-image: url("https://imgs.search.brave.com/8HdYJhsU63XONPBMgkx-WmOyXaf2Jb5pxIFvlAO7w0Q/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFqa3JMSG1pTkwu/anBn");
+            background-size: cover;
+           }
+           .ss2-image4{
+            width: 269.99px ;
+            height: 174.66px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 5px;
+            background-image: url("https://imgs.search.brave.com/GaVgu2nQPNFulNJoxAkc5o5LfJ0VuCUS9NHvLS9RqKI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFVcmRuLVVvUUwu/anBn");
+            background-size: cover;
+           }
+           .ss2-image5{
+            width:210px ;
+            height: 200px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 5px;
+            background-image: url("https://imgs.search.brave.com/y1xvRX_009mlooA-tK8WgJUfavTik_LynRMFRvy-98o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFuR0NuNlJrVkwu/anBn");
+            background-size: cover;
+           }
+           .shop-section3{
+            height: 285px;
+            width: 93.9vw;
+            background-color: white;
+            position: relative;
+            left: 40px;
+            margin:20px 0px 20px 0px;
+            padding: 10px 20px 10px 20px;
+           }
+           .section3-images{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss3-image1{
+            width:292px ;
+            height: 210px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 5px;
+            background-image: url("https://imgs.search.brave.com/wO0dECxnazwesbMWz5ct9yoBcBRF1r2fQjyn_587sdc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTEv/Mzg4Lzg4OS9zbWFs/bC9wYW4td2l0aC1o/YW5kbGUtYW5kLXNw/YWRlLW9mLWZyeWlu/Zy1wYW4tcGhvdG8u/anBn");
+            background-size: cover;
+           }
+           .ss3-image2{
+            width:200px ;
+            height: 200px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 5px;
+            background-image: url("https://imgs.search.brave.com/F8CBydUU3eN2LCifs-mkIjqT4rCFf1v4BR239as-gnk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMDAv/MjY5LzM4My9zbWFs/bC9idXRjaGVyLWtu/aWZlLmpwZw");
+            background-size: cover;
+           }
+           .ss3-image3{
+            width:200px ;
+            height: 200px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 5px;
+            background-image: url("https://imgs.search.brave.com/DrQCaRospsjP2lbwDcWmS9KmzsvqHXFTlZGwF_4THys/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFSOFlDQWVyM0wu/anBn");
+            background-size: cover;
+           }
+           .ss3-image4{
+            width:156px ;
+            height: 200px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 5px;
+            background-image: url("https://imgs.search.brave.com/jvth8_4Pes9AgAzR90yW1jvpBPuONExPcm1jT_AphRw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/Lzg3NDA4MzUvci9p/bC8yNTM3ZmQvNzI4/NzEwMDA1OS9pbF8z/MDB4MzAwLjcyODcx/MDAwNTlfaGoxdy5q/cGc");
+           background-size: contain;
+           background-repeat: no-repeat;
+           background-position: center;
+           }
+           .ss3-image5{
+            width:200px ;
+            height: 200px;
+            background-color: white;
+            margin: 0px 0px 0px 0px;
+            padding: 5px;
+            background-image: url("https://imgs.search.brave.com/HqRFDnM469DTW1QOWKvBToH2HAoLA0BMlHqz0gBUJms/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjEyZy1tczA0ckwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .shop-section4{
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            left: 16px;
+           }
+           .ss4-box1{
+            width: 330.13px;
+            height: 420px;
+            background-color: white;
+            padding: 20px 10px 15px 10px;
+            margin: 0px;
+            
+           }
+           .ss4-image1-2{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px 0px 10px 0px ;
+           }
+           .ss4-image1{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/9xWBwDzty1WeIc8UXBY4YuDwXeVjkMoy26Yl-qa4hEs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMzYv/NzUwLzAyMC9zbWFs/bC9haS1nZW5lcmF0/ZWQtbWFuLXdlYXJp/bmctd2hpdGUtdC1z/aGlydC1vbi1saWdo/dC1ncmV5LXBob3Rv/LmpwZw");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image2{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/1w8-UVKhgRkT2qpwqPIr63ADU-DJ6soM-qNi_y4Dabw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hYnJv/c3Nob2VzLmNvbS9j/ZG4vc2hvcC9maWxl/cy9FZWNvXzAwMDBf/R2VuZXJhdGl2ZUZp/bGwuanBnP3Y9MTc1/NjI5NzQzMSZ3aWR0/aD0xNjAw");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image3-4{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px 0px 10px 0px ;
+           }
+           .ss4-image3{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/JTDV3-FW_k7CaH-aVyaoZeB66AKd3Tc7-sE0W7tijQE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9yZWRj/aGllZi5pbi9jZG4v/c2hvcC9maWxlcy9J/TUdfNjkzMl9kYzU3/OTA1YS0wZDdjLTQ1/MDQtOGY2ZC00NTA2/OTJkMDMwNmYuanBn/P3Y9MTc2MzM4MTAx/OCZ3aWR0aD0zNzU");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image4{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/ztq2jAg3EqfbiJKHyXR6WQOq7RZ9dCbxh6ucys-fGdA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFIbnh2QThPOUwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-box2{
+            width: 330.13px;
+            height: 420px;
+            background-color: white;
+            padding: 20px 10px 15px 10px;
+            margin: 0px;
+            
+           }
+           .ss4-image5-6{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px 0px 10px 0px ;
+           }
+           .ss4-image5{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/eRu1TPVG9xqsO3VgOiay6zX_TWCBZkMO_XopXve5nys/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFXbXJlWFI5OUwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image6{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/qynSQX43YiMZdfHOd_fryIgtrYOOZ9x48d8p1uSKo4c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdk/LmFlcGxjZG4uY29t/LzEwNTZ4NTk0L24v/aGVrcHNlYl8xNzc3/MjEzLmpwZz9xPTgw");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image7-8{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px 0px 10px 0px ;
+           }
+           .ss4-image7{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/yZhWcYL4muOu7mp_OTpCO3rzy_D2zZtzFqejgL52644/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzI5L2Nj/LzIzLzI5Y2MyMzY5/MTEyODdlZGM4MDUw/MjgxNjFiYjEyMWY5/LmpwZw");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image8{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/nHs_DfHoLKXO_Okt7cMOn3V6QLBkKEviiTzGGJ42IcE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFNV25LcUFsbkwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-box3{
+            width: 330.13px;
+            height: 420px;
+            background-color: white;
+            padding: 20px 10px 15px 10px;
+            margin: 0px;
+            
+           }
+           .ss4-image9-10{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px 0px 10px 0px ;
+           }
+           .ss4-image9{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/U8jH46YFDK0deJr4eMtfE_Xr63SXP1DEy75WE_2Q9kE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly81Lmlt/aW1nLmNvbS9kYXRh/NS9FQ09NL0RlZmF1/bHQvMjAyNC84LzQ0/MDAzNTAwMC9JVC9E/Ry9NVC80NzY5OTc1/MC82MXV6cW1jcmFl/bC01MDB4NTAwLmpw/Zw");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image10{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/mIRxRfcxVXDHBB0y1WS9r1kr0_aHvNogoDkT44EIEOI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFiT3h4V1dJZUwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image11-12{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px 0px 10px 0px ;
+           }
+           .ss4-image11{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/_TeTxEEfEKkkh4D-bTiz4E2UB9YK9g_LrmL-zmDmbnk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDF6K0k3MnNKWEwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image12{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/k501VAKuVy5lOLafw0o5iok4lhPIYZuDbAea0ydq-aE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDF6VHZqTGJ4dUwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-box4{
+            width: 330.13px;
+            height: 420px;
+            background-color: white;
+            padding: 20px 10px 15px 10px;
+            margin: 0px;
+            
+           }
+           .ss4-image13-14{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px 0px 10px 0px ;
+           }
+           .ss4-image13{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/ILgsthaTS4x9d3-Oqbre1pm-uq78KV05nLW2eadi5KE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFtVVJ2OGY2bUwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image14{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/lo3xQmQbMzjjX4vQIS_JovSS9bIwWNUaYs6vUNiM57g/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxSTFmM2tNSjZM/Ll9BQ19VTDE2NV9T/UjE2NSwxNjVfLmpw/Zw");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image15-16{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px 0px 10px 0px ;
+           }
+            .ss4-image15{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/kvQKZlomzryvNSwg9VPLBehq7fSzzeKSTCyGZVXo0CA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFpMjBHdjB0R0wu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss4-image16{
+            width: 142.06px;
+            height: 135.2px;
+            background-image: url("https://imgs.search.brave.com/uLYZ5JaFpnDXeILU4HIqQIm3HvyjDl2nyHxiWJvWQOI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFXT3RQOHRpOUwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .shop-section5{
+            height: 285px;
+            width: 93.9vw;
+            background-color: white;
+            position: relative;
+            left: 40px;
+            margin:20px 0px 20px 0px;
+            padding: 10px 20px 10px 20px;
+           }
+           .section5-images{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss5-image1{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/Wltw93_tLwKBcRr73s5ngbKfTWVHOxugx0VeJpQ2st0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDEtWmJaVDUyUkwu/anBn");
+            background-size: cover;
+           }
+            .ss5-image2{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/UF6LfAwPyuye7rkB_M12DG3qex8GsBh3wFd4gPg9Ak0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFsZTdranUtTEwu/anBn");
+            background-size: cover;
+           }
+           .ss5-image3{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/66EF5a_4LNZjRrdqEelh0pIrhRgllDxWOK8aFHv-G1w/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFKeWM4bFZSTEwu/anBn");
+            background-size: cover;
+           }
+            .ss5-image4{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/yNdxcAmAxL5ry3WmFeyqnSf26vuqJZENJX4pLYyubVE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFLTUpkRWtqakwu/anBn");
+            background-size: cover;
+           }
+           .ss5-image5{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/cZXu6pPEuhn3jIWWIcxkyp7sjc9jkBwh2QJ-ekj94Bg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFScXpTSkVkQkwu/anBn");
+            background-size: cover;
+           }
+           .ss5-image6{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/q5ceKIMX-soFYBIhZuHvaBUDy6yzgwusURqcuX_ToiM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFwSkRCV2lRd0wu/anBn");
+            background-size: cover;
+           }
+           .shop-section6{
+            height: 285px;
+            width: 93.9vw;
+            background-color: white;
+            position: relative;
+            left: 40px;
+            margin:20px 0px 20px 0px;
+            padding: 10px 20px 10px 20px;
+           }
+            .section6-images{
+            display: flex;
+            justify-content: space-evenly;
+           }
+            .ss6-image1{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/cZ_ZGjTjOxDAZ863-h6V_wgkrY0sjaHSxtcJIe958_0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF3enAwRVdISEwu/anBn");
+            background-size: cover;
+           }
+           .ss6-image2{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/eey-95yrmcnsEl1q-5Vz8xiDJCWzaEfzQysvFNSKfTM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDEycFkwY3ZFLUwu/anBn");
+            background-size: cover;
+           }
+            .ss6-image3{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/rGL5ZiG2yLxHDhi3c5Sk7UXwXTy99jMzpdhNSOdws3c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFWeTRuSDBydkwu/anBn");
+            background-size: cover;
+           }
+            .ss6-image4{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/rYElJPJGWdqRYHe6MdSqNTsEPy0WHstDglRSOXGz_Rk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjE5dWxKYTAzYUwu/anBn");
+            background-size: cover;
+           }
+            .ss6-image5{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/wsWjMibZH_WjxiFV4M3uJOLuv5_KL_4Ivn_txvkYLFk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFnbUhNdi1SR0wu/anBn");
+            background-size: cover;
+           }
+            .ss6-image6{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/C49hWDNpbcmLYniMQhXsUrJENROXxMSTC4hfdydwVDo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDEzOVVBTVpkbUwu/anBn");
+            background-size: cover;
+           }
+           .shop-section7{
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            left: 16px;
+           }
+           .ss7-box1{
+            width: 330.14px;
+            height: 420px;
+            background-color: white;
+            padding: 20px 10px 15px 10px;
+            margin: 0px;
+            
+           }
+           .ss7-image1{
+            width: 344.59px;
+            height: 274.6px;
+            margin: 10px 0px 10px;
+            background-image: url("https://imgs.search.brave.com/0N3Q0phnkwyWeCZt0dO5tOo7_pWXSwRE8wFqtGuSh1E/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzgxL2I4/L2NkLzgxYjhjZDIx/ZDYzODY5MzRjYWU5/YTJlNGQ2ZmE1NTk3/LmpwZw");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+           }
+           .ss7-box2{
+            width: 330.14px;
+            height: 420px;
+            background-color: white;
+            padding: 20px 0px 15px 0px;
+            margin: 0px;
+           }
+           .ss7-image2-3{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss7-image2{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/8Kw1VnEo0cZskvm7oQY1Gqdfn98UgH3vrs_-JAjN7Fc/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtZXUuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzYxdWgtVlEwZk5M/Ll9BQ19VTDE2NV9T/UjE2NSwxNjVfLmpw/Zw");
+            background-size: cover;
+           }
+           .ss7-image3{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/7-apYbdxzyxYiGcvkXbwhySj53G3NZFElnaiTRUhPcM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFyaklxWStyTEwu/anBn");
+            background-size: cover;
+           }
+           .ss7-image4-5{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss7-image4{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/SmPR9ID_gKBVQ1BY1aI8O8qTn3cROL5jfi-QLJFR1fg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzF0K1dyUzVtbEwu/anBn");
+            background-size: cover;
+           }
+           .ss7-image5{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/CGiWpt5qVgALo6qr8VdtJIv5qF61RmhsM_wb19SOIgY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFlMG45Q3g5TUwu/anBn");
+            background-size: cover;
+           }
+           .ss7-box3{
+            width: 330.14px;
+            height: 420px;
+            background-color: white;
+            padding: 20px 0px 15px 0px;
+            margin: 0px;
+           }
+           .ss7-image6-7{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss7-image6{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/2pp-jqEFo68qYkmnUgPLbZpF_eQ1k7nYw_PR3gNZRm0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFxK1pwcit3c0wu/anBn");
+            background-size: cover;
+           }
+           .ss7-image7{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/c0ZNG5AcF2k1TSL77PJ3J7v6tqAEUIP9u6eIZ-K_sZQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTErM05aamhRa0wu/anBn");
+            background-size: cover;
+           }
+           .ss7-image8-9{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss7-image8{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/q7ZQ0MfKoegwhQdeF8NRAc4SCbNa7PPSPRGx_H5eA-I/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/OTFralVQd0xPbEwu/anBn");
+            background-size: cover;
+           }
+           .ss7-image9{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/83VqIPGjBb6mWrfflBlf6vEKCr-W0P4r4mv1mMuao78/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFBdFpsTFNRcEwu/anBn");
+            background-size: cover;
+           }
+           .ss7-box4{
+            width: 330.14px;
+            height: 420px;
+            background-color: white;
+            padding: 20px 0px 15px 0px;
+            margin: 0px;
+           }
+           .ss7-image10-11{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss7-image10{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/flZZUnq6BL2GqY5wEBvEDNrPG36aVfwg4Bj93Sph_LU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFkMW5IZjJKSUwu/anBn");
+            background-size: cover;
+           }
+           .ss7-image11{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/Csfz9XusdMbLhotpKamShau7rlao44BgSFbcs89HSMc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/QTFUQlVSZ3Znd0wu/anBn");
+            background-size: cover;
+           }
+           .ss7-image12-13{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss7-image12{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/QJqsjn4Ya6b_RLD09pxK2YfTYlG3f_29Nzy7tw6dtO4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFWc3p0M0hLT0wu/anBn");
+            background-size: cover;
+           }
+           .ss7-image13{
+            width: 142.06px;
+            height: 157.2px;
+            background-image: url("https://imgs.search.brave.com/hnKPfiiJxIN2uX65PARDOTxT_bomLJNFYB3cIueTrSM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2VmLzNl/LzczL2VmM2U3MzM5/NDA4ZWI2ZjA4ODhm/Njk0YTY5M2ExMjVk/LmpwZw");
+            background-size: cover;
+           }
+           .shop-section8{
+            height: 285px;
+            width: 93.9vw;
+            background-color: white;
+            position: relative;
+            left: 40px;
+            margin:20px 0px 20px 0px;
+            padding: 10px 20px 10px 20px;
+           }
+           .section8-images{
+            display: flex;
+            justify-content: space-evenly;
+           }
+           .ss8-image1{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/7DfE5J31ijfJlauKiqDeKn-uIl1PfRPMYkBQwyZ3fFI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF0Tms0RGVSQkwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center ;
+           }
+           .ss8-image2{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/IDYzjRfRVtakphrdnCwsh3-kolEwEuadBEbEn6s_13o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFFbVd1UCtucEwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center ;
+           }
+           .ss8-image3{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/jaz1QK8ABV2KGgRN7h-4GmTN4TR8nEh9Wzzqe-4dPt4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFLMFExVnN6Y0wu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center ;
+           }
+           .ss8-image4{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/-vrtKJ1N55LzPNKuPcN5zyyW3sSjlijb3JHz7_My3lo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFyanZ1Mko0M0wu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center ;
+           }
+           .ss8-image5{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/AygD85AJVcvzVXm7f0fzCgjPTON8acXe9e-SDu4T1IA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFsbUdidDZwSUwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center ;
+           }
+           .ss8-image6{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/f3FeiFa90lzXqDZCP6lHAghrPfBWy8DmYj635KtrLKs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzFlVXdEazh6K0wu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center ;
+           }
+           .ss8-image7{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/65_QIpXMOdvpQI5FGmDR1mBao1u-CsifQ0n5usOv1Jk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzFyOXlTWC1KSEwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center ;
+           }
+           .ss8-image8{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            background-image: url("https://imgs.search.brave.com/tljfOt7juGiWeJMbz2AzUIriIWYE2bQYbP1SZkQTGiU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjF2TW94S05kMUwu/anBn");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center ;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <div class="logo border"></div>
+            <div class="nav-address border">
+                <div class="delivery">Delivery to guwahati</div>
+                <div class="location-logo">
+                <i class="fa-solid fa-location-dot"></i>
+                Updated location
+            </div>
+            </div>
+            
+            <div class="nav-search borderSearch">
+                <select class="nav-select"> 
+                    <option>All</option>
+                </select>
+                <input placeholder="search amazon" class="nav-placeholder">
+                <div class="nav-search-logo">
+                    <i class="fa-brands fa-sistrix"></i>
+                </div>
+            </div>
+
+            <div class="flag border">
+                <div class="flag-logo"></div>
+                <div >
+                    
+                     <select class="flag-select">
+                    <option>En</option>
+                </select>
+                </div>
+               
+            </div>
+
+            <div class="nav-account&Lists border">
+                <p id="hello-sign-in">Hello, sign in</p>
+                <p>Account & lists</p>
+            </div>
+
+            <div class="nav-return-orders border">
+                <div class="return&orders">
+                     <p id="returns" >Returns</p>
+                    <pre> & Orders</pre>
+                </div>
+            </div>
+
+            <div class="cart border">
+                <div class="cart-logo">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <p>Cart</p>
+            </div>
+            
+            
+        </div>
+
+        <div class="panel">
+                <div class="panel-bar border">
+                    <i class="fa-solid fa-bars" style="color: white;"></i>
+                    
+                </div>
+                <div class="all border">All</div>
+                <div class="mx-player border">MX player</div>
+                <div class="seller border">Seller</div>
+                <div class="bestseller border">Bestseller</div>
+                <div class="mobiles border">Mobiles</div>
+                <div calss="customer-service border">Customer Service</div>
+                <div class="today-deal border">Today's Deal</div>
+                <div class="prime border">
+                    <select class="panel-select">
+                        <option>Prime</option>
+                    </select>
+                </div>
+                <div class="new-release border">New Releases</div>
+                <div class="fashion border">Fashion</div>
+                <div class="amazon-pay border">Amazon Pay</div>
+                <div class="electronics border">Electronics</div>
+                <div class="home-kitchen border">Home & Kitchen</div>
+                <div class="toys-games border">Toys & Games</div>
+                <div class="computer border">Computer</div>
+                <div class="books border">Books</div>
+                <div class="giftcards border">Gift Cards</div>
+            </div>
+
+            <div class="content">
+                <div class="deals">
+                    Starting <i class="fa-solid fa-indian-rupee-sign">199</i><br>
+                    Deals on fashion & beauty
+                </div>
+                <div class="content-image">
+                </div>
+            </div>
+
+            <div class="shop-section1">
+                <div class="box1 box"><h2>Appliance for your home | upto 55% off</h2>
+                    <div class="image1-2">
+                        <div class="image1"></div>
+                        <div class="image2"></div>
+                    </div>
+                    <div class="ac-fridge">
+                        <div class="ac">AC</div>
+                        <div class="fridge">Refrigerator</div>
+                    </div>
+
+                    <div class="image3-4">
+                        <div class="image3"></div>
+                        <div class="image4"></div>
+                    </div>
+                    <div class="microwave-washingMachine">
+                        <div class="microwave">Microwave</div>
+                        <div class="washingMachine">Washing Machine</div>
+                    </div><br>
+                    <a>See more</a>
+                    </div>
+                <div class="box2 box"><h2 style="height: 54.4px;">Revamp your home in style</h2>
+                    <div class="image5-6">
+                        <div class="image5"></div>
+                        <div class="image6"></div>
+                    </div>
+                    <div class="bedsheet-figurines">
+                        <div class="bedsheet">Bedsheet,cushion covers & more</div>
+                        <div class="figurines">Figurines , vases & more</div>
+                    </div>
+                    <div class="image7-8">
+                        <div class="image7"></div>
+                        <div class="image8"></div>
+                    </div>
+                    <div class="storage-lighting">
+                        <div class="storage">Home storage</div>
+                        <div class="lighting">Lighting solution</div>
+                    </div><br>
+                    <a>See more</a>
+                 </div>
+                <div class="box3 box"><h2 style="height: 54.4px;">Bulk order discounts + Up to 18% GST savings</h2>
+                    <div class="image9-10">
+                        <div class="image9"></div>
+                        <div class="image10"></div>
+                    </div>
+                    <div class="laptop-kitchen">
+                        <div class="laptop">Upto 45% off | Laptops</div>
+                        <div class="kitchen">Upto 60% off | Kitchen appliancess</div>
+                    </div>
+                    <div class="image11-12">
+                        <div class="image11"></div>
+                        <div class="image12"></div>
+                    </div>
+                    <div class="chair-boots">
+                        <div class="chair">Min 50% off | office furnitures</div>
+                        <div class="boots">Min 20% off | football boots</div>
+                    </div><br>
+                    <a>See more</a>
+                </div>
+                <div class="box4 box"><h2 style="height: 54.4px;">Automotive essentials | Up to 60% off</h2>
+                    <div class="image13-14">
+                        <div class="image13"></div>
+                        <div class="image14"></div>
+                    </div>
+                    <div class="cleaning-tyre">
+                        <div class="cleaning">Cleaning accessories</div>
+                        <div class="tyre">Tyre & rim care</div>
+                    </div>
+                    <div class="image15-16">
+                        <div class="image15"></div>
+                        <div class="image16"></div>
+                    </div>
+                    <div class="helmet-vaccumCleaner">
+                        <div class="helmet">Helmets</div>
+                        <div class="vaccumCleaner">Vaccum Cleaner</div>
+                    </div><br>
+                    <a>See more</a>
+                </div>
+            </div>
+
+            <div class="shop-section2"><h2>Up to 40% off | Big savings on electronics & accessories</h2>
+                <div class="section2-images">
+                    <div class="ss2-image1 "></div><!--will be using ss2 for adding images in shop section 2 so that the names donot resember each other-->
+                    <div class="ss2-image2 "></div>
+                    <div class="ss2-image3 "></div>
+                    <div class="ss2-image4 "></div>
+                    <div class="ss2-image5 "></div>
+            </div>
+        </div>
+
+        <div class="shop-section3"><h2>Up to 60% off | Cookware, kitchen tool & more | Amazon Launchpad</h2>
+            <div class="section3-images">
+                <div class="ss3-image1"></div>
+                <div class="ss3-image2"></div>
+                <div class="ss3-image3"></div>
+                <div class="ss3-image4"></div>
+                <div class="ss3-image5"></div>
+            </div>
+        </div>
+
+        <div class="shop-section4">
+            <div class="ss4-box1"><h2>Customers’ Most-Loved Fashion for you</h2>
+                <div class="ss4-image1-2">
+                    <div class="ss4-image1"></div>
+                    <div class="ss4-image2"></div>
+                </div>
+                <div class="ss4-image3-4">
+                    <div class="ss4-image3"></div>
+                    <div class="ss4-image4"></div>
+                </div><br>
+                <a>see more</a>
+            </div>
+            <div class="ss4-box2"><h2>Starting ₹70,348 | Engineered for the road</h2>
+                <div class="ss4-image5-6">
+                    <div class="ss4-image5"></div>
+                    <div class="ss4-image6"></div>
+                </div>
+                <div class="ss4-image7-8">
+                    <div class="ss4-image7"></div>
+                    <div class="ss4-image8"></div>
+                </div><br>
+                <a>see more</a>
+            </div>
+            <div class="ss4-box3"><h2>Best Sellers in Computers & Accessories</h2>
+                <div class="ss4-image9-10">
+                    <div class="ss4-image9"></div>
+                    <div class="ss4-image10"></div>
+                </div>
+                <div class="ss4-image11-12">
+                    <div class="ss4-image11"></div>
+                    <div class="ss4-image12"></div>
+                </div><br>
+                <a>see more</a>
+            </div>
+            <div class="ss4-box4"><h2>Up to 60% Off | Smart furniture for every room</h2>
+                <div class="ss4-image13-14">
+                    <div class="ss4-image13"></div>
+                    <div class="ss4-image14"></div>
+                </div>
+                <div class="ss4-image15-16">
+                    <div class="ss4-image15"></div>
+                    <div class="ss4-image16"></div>
+                </div><br>
+                <a>see more</a>
+            </div>
+        </div>
+        <div class="shop-section5"><h2 style="margin: 20px;">Min. 50% off | Unique home finds | Amazon Brands & more</h2>
+            <div class="section5-images">
+                <div class="ss5-image1"></div>
+                <div class="ss5-image2"></div>
+                <div class="ss5-image3"></div>
+                <div class="ss5-image4"></div>
+                <div class="ss5-image5"></div>
+                <div class="ss5-image6"></div>
+            </div>
+        </div>
+        <div class="shop-section6"><h2 style="margin: 20px;">Min.35% off | Trending & must-haves | Small Businesses</h2>
+            <div class="section6-images">
+                <div class="ss6-image1"></div>
+                <div class="ss6-image2"></div>
+                <div class="ss6-image3"></div>
+                <div class="ss6-image4"></div>
+                <div class="ss6-image5"></div>
+                <div class="ss6-image6"></div>
+            </div>
+        </div>
+        <div class="shop-section7">
+            <div class="ss7-box1"><h2>Starting ₹99 | Start your fitness journey</h2>
+                <div class="ss7-image1"></div><br>
+                <a style="color: blue;">see more</a>
+            </div>
+            <div class="ss7-box2"><h2 style="margin: 0px 0px 10px;padding: 0px 20px;">Best Sellers in Beauty</h2>
+                <div class="ss7-image2-3">
+                    <div class="ss7-image2"></div>
+                    <div class="ss7-image3"></div>
+                </div>
+                <div class="ss7-image4-5">
+                    <div class="ss7-image4"></div>
+                    <div class="ss7-image5"></div>
+                </div><br>
+                <a style="color: blue;padding: 0px 10px;">see more</a>
+            </div>
+
+            <div class="ss7-box3"><h2 style="margin: 0px 0px 10px;padding: 0px 20px;">Starting ₹199 | Organize your home smartly</h2>
+                <div class="ss7-image6-7">
+                    <div class="ss7-image6"></div>
+                    <div class="ss7-image7"></div>
+                </div>
+                <div class="ss7-image8-9">
+                    <div class="ss7-image8"></div>
+                    <div class="ss7-image9"></div>
+                </div><br>
+                <a style="color: blue;">see more</a>
+            </div>
+            <div class="ss7-box4"><h2 style="margin: 0px 0px 10px;padding: 0px 20px;">Min. 30% off | Upgrade your home with products</h2> 
+                <div class="ss7-image10-11">
+                    <div class="ss7-image10"></div>
+                    <div class="ss7-image10"></div>
+                </div>
+                 <div class="ss7-image12-13">
+                    <div class="ss7-image12"></div>
+                    <div class="ss7-image13"></div>
+                </div><br>
+                <a style="color: blue;">See more</a>
+            </div>
+        </div>
+        <div class="shop-section8"><h2 style="margin: 20px;">Best Sellers in Clothing & Accessories</h2>
+            <div class="section8-images">
+                <div class="ss8-image1"></div>
+                <div class="ss8-image2"></div>
+                <div class="ss8-image3"></div>
+                <div class="ss8-image4"></div>
+                <div class="ss8-image5"></div>
+                <div class="ss8-image6"></div>
+                <div class="ss8-image7"></div>
+                <div class="ss8-image8"></div>
+            </div>
+        </div>
+    </body>
+</html>
